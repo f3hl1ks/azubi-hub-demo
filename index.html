@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="description"
+      content="Azubi Hub – zentrale Plattform für Auszubildende der Starke Automobilgruppe"
+    />
+    <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+    <link rel="apple-touch-icon" href="./icon.svg" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <title>Azubi Hub</title>
+    <script>
+      /* Theme vor dem ersten Paint anwenden – verhindert Dark-Mode-Blitzen */
+      (function () {
+        try {
+          var t = localStorage.getItem('azubi-hub.theme') || 'system';
+          var dark =
+            t === 'dark' || (t === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-Dw2UdJon.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BopCdwfR.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
